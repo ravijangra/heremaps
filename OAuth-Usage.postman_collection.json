@@ -13,12 +13,12 @@
 					"oauth1": [
 						{
 							"key": "consumerSecret",
-							"value": "YFfeXiblzMyDXTvtPvT_zSgSCGHJ5c-UiJikzNSNquDvu0mg45wlq7pSKddgqkO76TXeFVigHB17oVQngd6Vww",
+							"value": "ADD YOUR SECRET",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "WadwcUsu-ebAlhidnYXQ6g",
+							"value": "ADD YOUR OWN ACCESS KEY",
 							"type": "string"
 						},
 						{
