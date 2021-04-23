@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "2dd2b29b-c044-40d9-8912-e2619c3c1061",
+		"name": "HERE Maps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET HERE Map OAUTH Token",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "YFfeXiblzMyDXTvtPvT_zSgSCGHJ5c-UiJikzNSNquDvu0mg45wlq7pSKddgqkO76TXeFVigHB17oVQngd6Vww",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "WadwcUsu-ebAlhidnYXQ6g",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA256",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://account.api.here.com/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"account",
+						"api",
+						"here",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Base Tiles",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/13/4400/2686/256/png8",
+					"protocol": "https",
+					"host": [
+						"1",
+						"base",
+						"maps",
+						"ls",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"maptile",
+						"2.1",
+						"maptile",
+						"newest",
+						"normal.day",
+						"13",
+						"4400",
+						"2686",
+						"256",
+						"png8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
